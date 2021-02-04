@@ -18,6 +18,7 @@
   <properties>
     <java.version>11</java.version>
     <spring-cloud.version>2020.0.1</spring-cloud.version>
+    <logstash.logback.version>6.6</logstash.logback.version>
     <fabric8-docker-maven-plugin>0.34.1</fabric8-docker-maven-plugin>
     <docker.source.directory>docker</docker.source.directory>
     <docker.dockerfile>Dockerfile</docker.dockerfile>
@@ -35,6 +36,11 @@
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-test</artifactId>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.logstash.logback</groupId>
+      <artifactId>logstash-logback-encoder</artifactId>
+      <version>${logstash.logback.version}</version>
     </dependency>
   </dependencies>
 
