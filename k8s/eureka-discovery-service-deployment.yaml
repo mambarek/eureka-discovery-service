@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: eureka-discovery-service-deployment
+spec:
+    replicas: 1
+    selector:
+        matchLabels:
+            component: eureka-discovery-service
+    template:
+        metadata:
+            labels:
+                component: eureka-discovery-service
+        spec:
+            containers:
+                - name: eureka-discovery-service
+                  image: mmbarek/eureka-discovery-service
+                  ports:
+                    - containerPort: 8761
